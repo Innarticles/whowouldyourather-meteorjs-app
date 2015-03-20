@@ -25,12 +25,12 @@ Template.registerHelper('getCelebPic',function(id){
 
 count = 0;
 Template.registerHelper('oneRandomPost', function () {
+  $('.btn-next').hide();
     Session.set('activeChoice', 'Marry');  
   $('.card').each(function () {
         $(this).removeClass('clicked');
         console.log("in card")
       });
-  $('.btn-next').hide();
   var postLength = Posts.find().count();
   var postLength =  postLength -1;
   

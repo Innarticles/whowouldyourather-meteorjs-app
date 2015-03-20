@@ -7,9 +7,8 @@ Router.configure({
     Session.set('Marry', null);
     Session.set('HookUpWith', null);
     Session.set('Kill', null);
-    // Session.set('activeChoice', 'Marry');
-
-
+    $('.btn-next').hide();
+ 
     // Session.set('cardCount', 0);
     // Session.set('postPosition', 0);
     console.log('I got here');
@@ -18,10 +17,10 @@ Router.configure({
       this.redirect('/setUserName');
     }
     return this.next();
-  }
+  // }
   // onAfterAction: function() {
     
-  // }
+  }
 });
 
 Router.map(function() {
@@ -29,8 +28,8 @@ Router.map(function() {
     path: "/",
     layoutTemplate: "homeLayout"
   });
-  this.route("dashboard", {
-    path: "/dashboard",
+  this.route("play", {
+    path: "/play",
     waitOn: function() {
       return [Meteor.subscribe('posts'), Meteor.subscribe('celebs'), Meteor.subscribe('favorites'), Meteor.subscribe('comments'), Meteor.subscribe('attachments')];
     },
@@ -41,6 +40,8 @@ Router.map(function() {
         Session.set('redirectToAfterSignIn', null);
         Router.go(url);
       }
+      // $('.btn-next').hide();
+
       return this.next();
     },
     data: function() {
@@ -53,7 +54,20 @@ Router.map(function() {
       };
     }
   });
-   
+  
+  // Add Posts Page
+  this.route("addPost", {
+    path: "/posts/new",
+    waitOn: function() {
+      return [Meteor.subscribe('celebs'), Meteor.subscribe('attachments'), Meteor.subscribe('posts')];
+    },
+    data: function(){
+        return {                        
+            Posts: Posts.find().fetch()
+        };
+    }  
+  });
+
   // All Celebs Page
   this.route("celebs", {
     path: "/celebs",
@@ -89,7 +103,7 @@ Router.map(function() {
     path: "/setUserName",
     onBeforeAction: function() {
       if (!Config.username || (Meteor.userId() && Meteor.user().username)) {
-        this.redirect('/dashboard');
+        this.redirect('/play');
       }
       return this.next();
     }
@@ -131,7 +145,7 @@ saveRedirectUrl = function() {
   return this.next();
 };
 
-publicRoutes = _.union(Config.publicRoutes, ['entrySignIn', 'entrySignUp', 'entryForgotPassword', 'celebs']);
+publicRoutes = _.union(Config.publicRoutes, ['entrySignIn', 'entrySignUp', 'entryForgotPassword', 'celebs', 'posts', 'gameStats']);
 
 Router.onBeforeAction(saveRedirectUrl, {
   except: _.union(publicRoutes, ['entrySignOut'])
@@ -143,7 +157,7 @@ Router.onBeforeAction(signInRequired, {
 
 signInProhibited = function() {
   if (Meteor.user()) {
-    return Router.go('dashboard');
+    return Router.go('play');
   } else {
     if (this.next) {
       return this.next();
