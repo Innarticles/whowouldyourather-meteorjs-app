@@ -6,7 +6,7 @@
 				<!-- {{> addWithModal}} -->
 				<!-- {{> favorites}} -->
 			<!-- </div> -->
-			<div class="col-md-9">
+			<div class="container">
 				{{> alert}}
 				{{> posts}}
 			</div>
@@ -50,7 +50,7 @@
 <template name="posts">
 	{{#with oneRandomPost}}
 	<!-- {{#each Posts}} -->
-		<div class="panel panel-default">
+		<!-- <div class="panel panel-default"> -->
 		<!-- {{#with oneRandomPost}} -->
 				<!-- <div class="panel-heading">
 					<h3 class="panel-title">
@@ -61,39 +61,38 @@
 						</span>
 					</h3>
 				</div> -->
-				<div class="panel-body">
-				<div class="col-md-12">
+				<!-- <div class="panel-body"> -->
+				<div class="col-md-12 text-center">
 			      <h1>Who would you rather {{$.Session.get 'activeChoice'}}?</h1>
+			      <p>Click on the image of the celeb you'd like to {{$.Session.get 'activeChoice'}}. </p>
 			    </div>
 					<div class="text-center">
-						<div class="card col-xs-6 col-md-4" data-celebrity="{{celeb1s}}">
-							<div class="card-image ">
-							<!-- {{#with FS.GetFile 'images' picture}} -->
+						<div class="card col-md-4" data-celebrity="{{celeb1s}}">
+							<div class="card-image">
 					          <img class="activator img-responsive" src="{{getCelebPic celeb1s}}">
-					         <!-- {{/with}} -->
 					        </div>
-					        <div align="center">
-					          <span class="card-title activator grey-text text-darken-4">{{getCelebName celeb1s}}</span>
+					        <div align="center" class="card-title activator grey-text text-darken-4">
+					          {{getCelebName celeb1s}}
 					        </div>
 					       
 						</div>
 
-						<div class="card col-xs-6 col-md-4" data-celebrity="{{celeb2s}}">
-							<div class="card-image ">
+						<div class="card col-md-4" data-celebrity="{{celeb2s}}">
+							<div class="card-image">
 					          <img class="activator img-responsive" src="{{getCelebPic celeb2s}}">
 					        </div>
-					        <div align="center">
-					          <span class="card-title activator grey-text text-darken-4">{{getCelebName celeb2s}}</span>
+					        <div align="center" class="card-title activator grey-text text-darken-4">
+					          {{getCelebName celeb2s}}
 					        </div>
 					        
 						</div>
 
-						<div class="card col-xs-6 col-md-4" data-celebrity="{{celeb1s}}">
-							<div class="card-image ">
+						<div class="card col-md-4" data-celebrity="{{celeb1s}}">
+							<div class="card-image">
 					          <img class="activator img-responsive" src="{{getCelebPic celeb3s}}">
 					        </div>
-					        <div align="center">
-					          <span class="card-title activator grey-text text-darken-4">{{getCelebName celeb3s}}</span>
+					        <div align="center" class="card-title activator grey-text text-darken-4">
+					          {{getCelebName celeb3s}}
 					        </div>
 					        
 						</div>
@@ -117,28 +116,38 @@
 							{{/if}}
 						</div>
 					</div> -->
-					<button class="btn btn-flat btn-next">Next</button>
-					 <a href="http://www.facebook.com/sharer.php?u={{urlFor 'home'}}" target="_blank" class="btn btn-block btn-social btn-facebook"><span><i class="fa fa-facebook"></i>Share</span></a>
-					<!-- <div class="btn btn-primary" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" align="right">Share</div> -->
-				</div>
+					<div id="next-post">
+						<p>Celeb Stats:</p>
+					    <!-- <p>Your Score: <span class="score"></span></p> -->
+					    <span class="sml">High Score: <span id="high"></span></span>
+					    <!-- <button>Play Again</button> -->
+						<button class="btn btn-flat btn-next">Next</button>
+						<a href="http://www.facebook.com/sharer.php?u={{urlFor 'home'}}" target="_blank" class="btn btn-block btn-social btn-facebook"><span><i class="fa fa-facebook"></i>Share</span></a>
+						<!-- <button class="btn btn-flat btn-next">Share</button>					     -->
 
-				<!-- <div class="panel-footer">
+					</div>
+				<!-- </div> -->
+				<span class="pull-right">
+							<i class="fa fa-thumbs-up post-icon-like"></i> {{favoriteCount _id}}
+							<i class="fa fa-comments post-icon-comment"></i> {{commentCount _id}}
+				</span>
+				<div class="panel-footer">
 					{{> favoriteButton _id=_id}}
 					{{> commentFormToggle }}
 					{{> comments}}
-				</div> -->
+				</div>
 			<!-- {{/with}}	 -->
-		</div>
+		<!-- </div> -->
 	{{/with}}
 	
 	
 </template>
 
-<template name="favorites">
+<!-- <template name="favorites">
 	{{#if Favorites 'Posts'}}
 	<div class="panel panel-default">
 		<div class="panel-heading">
-				<h3 class="panel-title">Favorites</h3>
+				<h3 class="panel-title">Like</h3>
 		</div>
 		<div class="panel-body">
 			<ul>
@@ -151,4 +160,4 @@
 		</div>
 	</div>
 	{{/if}}
-</template>
+</template> -->

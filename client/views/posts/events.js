@@ -16,15 +16,6 @@ Template.posts.rendered = function () {
     Session.set('postPosition', 0);
 };
 
-// Template.posts.onCreated = function () {
-//    // $('.card').each(function () {
-//    //      $(this).removeClass('clicked');
-//         console.log("in card")
-//       // });
-// };
-Template.posts.invokeAfterLoad = function () {
-  // $('.btn-next').hide();
-}
 
 Template.posts.events({
     'click ': function () {
@@ -68,14 +59,13 @@ Template.posts.events({
             }
 
             if(Session.get('cardCount') == 3) {
-              $('.btn-next').show();
+              // $('.btn-next').show();
+              $('#next-post').show();
+
             }
         }
     },
-    // 'click #vote': function () {
-
-
-    // },
+   
 
     'click .btn-next': function(e) {
       Session.set('postPosition', (Session.get('postPosition') + 1));

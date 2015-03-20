@@ -25,7 +25,9 @@ Template.registerHelper('getCelebPic',function(id){
 
 count = 0;
 Template.registerHelper('oneRandomPost', function () {
-  $('.btn-next').hide();
+  // $('.btn-next').hide();
+  $('#next-post').hide();
+
     Session.set('activeChoice', 'Marry');  
   $('.card').each(function () {
         $(this).removeClass('clicked');

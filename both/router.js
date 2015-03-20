@@ -8,7 +8,9 @@ Router.configure({
     Session.set('Marry', null);
     Session.set('HookUpWith', null);
     Session.set('Kill', null);
-    $('.btn-next').hide();
+    // $('.btn-next').hide();
+    $('#next-post').hide();
+
  
     // Session.set('cardCount', 0);
     // Session.set('postPosition', 0);
@@ -25,7 +27,9 @@ Router.configure({
 });
 
 Router.map(function() {
+
   this.route("home", {
+    trackPageView: true,
     path: "/",
     layoutTemplate: "homeLayout"
   });
