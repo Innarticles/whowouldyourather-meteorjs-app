@@ -117,14 +117,14 @@
 						</div>
 					</div> -->
 					<div id="next-post">
-
-						<p>Celeb Stats: {{getCelebStats celeb1s}}</p>
+						{{#with getCelebStats celeb1s}}
+						<p>Celeb Stats: {{this.marry}} </p>
 					    <!-- <p>Your Score: <span class="score"></span></p> -->
 					    <span class="sml">High Score: <span id="high"></span></span>
 					    <!-- <button>Play Again</button> -->
 						<button class="btn btn-flat btn-next">Next</button>
 						<button class="btn btn-flat btn-next">Share</button>					    
-
+						{{/with}}
 					</div>
 				<!-- </div> -->
 				<span class="pull-right">

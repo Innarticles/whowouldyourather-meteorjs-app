@@ -31,9 +31,7 @@ Template.registerHelper('getCelebStats',function(id){
     console.log(kStat);
    
     return {
-      marry : mStat,
-      laid : lStat,
-      kill : kStat
+      marry : mStat
     }
 });
 
