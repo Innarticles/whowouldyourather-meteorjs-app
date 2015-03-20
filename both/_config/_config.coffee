@@ -1,7 +1,7 @@
 @Config =
-	name: 'My App'
-	title: 'Make Meteor Apps. Fast.'
-	subtitle: 'A boilerplate from MeteorFactory.io'
+	name: 'Who Would You Rather?'
+	title: 'Marry, Fuck or Kill'
+	subtitle: 'Nigeria and Ghana Celebrity Edition'
 	logo: ->
 		'<b>' + @name + '</b>'
 	footer: ->
@@ -15,15 +15,9 @@
 	dashboardRoute: '/dashboard'
 	socialMedia:
 		facebook:
-			url: 'http://facebook.com/benjaminpeterjones'
+			url: 'http://facebook.com/whowouldyourather'
 			icon: 'facebook'
 		twitter:
-			url: 'http://twitter.com/BenPeterJones'
+			url: 'http://twitter.com/whowouldyourather'
 			icon: 'twitter'
-		github:
-			url: 'http://github.com/yogiben'
-			icon: 'github'
-		info:
-			url: 'http://meteorfactory.io'
-			icon: 'link'
-	publicRoutes: ['home']
+	publicRoutes: ['home', 'posts']

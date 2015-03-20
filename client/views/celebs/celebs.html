@@ -1,0 +1,58 @@
+<template name="celebs">
+
+  {{> addCelebForm}}
+
+  {{> celebEach}}
+
+</template>
+
+<!-- newCeleb.html -->
+<template name="addCelebForm">
+  <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Add a Celeb</h3>
+      </div>
+      <div class="panel-body">
+        {{#autoForm id="insertCelebForm" collection="Celebs" type="insert"}}
+        {{> afQuickField name="name"}}
+       
+        {{> afQuickField name="picture"}}
+        <button type="submit" class="btn btn-primary">Add Celeb</button>
+        {{/autoForm}}
+      </div>
+  </div>
+</template>
+
+
+<template name="celebEach">
+  {{#each Celebs}}
+      {{name}}
+      <p class="text-center">
+            {{#with getDoc picture 'Attachments'}}
+              <img src="{{url}}" class="img-thumbnail img-rounded">
+            {{/with}}
+      </p>
+  
+  <!-- <div class="col-sm-4">
+    <div class="card">
+      <div class="card-image ">
+        <img class="activator img-responsive" src="{{getImg picture}}">
+      </div>
+      <div class="">
+        <span class="card-title activator grey-text text-darken-4">{{this.name}}<i class="mdi-navigation-more-vert right"></i></span>
+        <a href="{{pathFor 'editceleb' _id=_id}}" class="btn btn-info"><i class="mdi-editor-mode-edit"></i></a>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
+        <p>Here is some more information about this celeb that is only revealed once clicked on.</p>
+      </div>
+    </div>
+  </div> -->
+
+  {{else}}
+  <!-- You can use {{else}} to handle an empty array-->
+  <p>No celebs yet</p>
+
+  {{/each}}
+</template>
+

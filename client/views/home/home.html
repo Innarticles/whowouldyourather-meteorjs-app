@@ -28,9 +28,9 @@
                         <h1>{{Config.title}}</h1>
                         <h2 style="color:white;" class="hidden-xs">{{Config.subtitle}}</h2>
                         {{#if currentUser}}
-                        <a href="{{pathFor 'dashboard'}}" class="btn btn-success"><i class="fa fa-dashboard"></i> Go to dashboard</a>
+                        <a href="{{pathFor 'dashboard'}}" class="btn btn-danger"><i class="fa fa-dashboard"></i> Play</a>
                         {{else}}
-                        <a class="btn btn-success" href="{{pathFor 'entrySignUp'}}">Get started</a>
+                        <a class="btn btn-danger" href="{{pathFor 'entrySignUp'}}">Get started</a>
                         {{/if}}
                     </div>
                     <!--                 <div class="col-lg-6 col-sm-6">
@@ -40,7 +40,7 @@
             </div>
         </div>
     </section>
-    <section id="how-it-works" class="text-center">
+    <!-- <section id="how-it-works" class="text-center">
         <div class="container wow fadeIn animated">
             <div class="row col-md-12">
                 <h3>How it works</h3>
@@ -72,7 +72,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- <section id="examples">
                 <div class="container wow fadeInUp animated">
                         <h1>Great features!</h1>
@@ -83,11 +83,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <h3>A revolutionary product</h3>
-                    <p>Do really cool stuff really quickly</p>
+                    <h3>Most Married Celebrity of the Day is:</h3>
+                    <p>Nadia Buari</p>
                     <p class="text-center">
-                    <a href="{{Config.about}}" target="_blank" class="btn btn-success">
-                    Made by MeteorFactory
+                    <a href="{{Config.about}}" target="_blank" class="btn btn-danger">
+                    See stats
                     </a>
                     </p>
                 </div>
@@ -102,7 +102,7 @@
             <div class="row">
                 <div class="col-md-4 text-center wow fadeInDown animated" data-wow-delay="0.8s">
                     <h3>
-                    Your life will be instantly better
+                    Most HookedUp With Celeb is Yvonne Nelson
                     </h3>
                     <div class="text-center">
                         <a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Take a look</a>

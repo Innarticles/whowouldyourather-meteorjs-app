@@ -5,10 +5,26 @@ Schemas.Posts = new SimpleSchema
 		type:String
 		max: 60
 
-	content:
-		type: String
-		autoform:
-			rows: 5
+	celeb1s:
+	    type: String
+	    autoform: options: [ {
+	      label: 'test'
+	      value: 'test'
+	    } ]
+
+	celeb2s:
+	    type: String
+	    autoform: options: [ {
+	      label: 'test'
+	      value: 'test'
+	    } ]
+
+	celeb3s:
+	    type: String
+	    autoform: options: [ {
+	      label: 'test'
+	      value: 'test'
+	    } ]
 
 	createdAt: 
 		type: Date
@@ -22,13 +38,6 @@ Schemas.Posts = new SimpleSchema
 		autoValue: ->
 			if this.isUpdate
 				new Date()
-
-	picture:
-		type: String
-		autoform:
-			afFieldInput:
-				type: 'fileUpload'
-				collection: 'Attachments'
 
 	owner: 
 		type: String

@@ -1,6 +1,15 @@
 AdminConfig =
 	name: Config.name
 	collections : 
+		Celebs: {
+			color: 'red'
+			icon: 'pencil'
+			auxCollections: ['Attachments']
+			tableColumns: [
+              {label: 'Name',name:'name'}
+              {label: 'Picture',name:'picture'}
+            ]
+		}
 		Posts: {
 			color: 'red'
 			icon: 'pencil'
