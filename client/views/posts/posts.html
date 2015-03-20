@@ -63,8 +63,8 @@
 				</div> -->
 				<!-- <div class="panel-body"> -->
 				<div class="col-md-12 text-center">
-			      <h1>Who would you rather {{$.Session.get 'activeChoice'}}?</h1>
-			      <p>Click on the image of the celeb you'd like to {{$.Session.get 'activeChoice'}}. </p>
+			      <h1>Who would you rather <span style="font-weight:700; color:#CF000F;" class="animated shake">{{$.Session.get 'activeChoice'}}?</span></h1>
+			      <p>Think Carefully, you only get <span style="font-weight:700; color:#CF000F;" class="animated shake">ONE</span> chance! Click on the image of the celebrity you'd like to {{$.Session.get 'activeChoice'}}. </p>
 			    </div>
 					<div class="text-center">
 						<div class="card col-md-4" data-celebrity="{{celeb1s}}">
@@ -117,7 +117,8 @@
 						</div>
 					</div> -->
 					<div id="next-post">
-						<p>Celeb Stats:</p>
+
+						<p>Celeb Stats: {{getCelebStats celeb1s}}</p>
 					    <!-- <p>Your Score: <span class="score"></span></p> -->
 					    <span class="sml">High Score: <span id="high"></span></span>
 					    <!-- <button>Play Again</button> -->

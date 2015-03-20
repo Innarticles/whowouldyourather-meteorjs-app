@@ -23,6 +23,20 @@ Template.registerHelper('getCelebPic',function(id){
     return Attachments.findOne({_id: p}).url();
 });
 
+Template.registerHelper('getCelebStats',function(id){
+    var c = Celebs.findOne({_id: id});
+    mStat = c.nMarry;
+    lStat = c.nLaid;
+    kStat = c.nKill;
+    console.log(kStat);
+   
+    return {
+      marry : mStat,
+      laid : lStat,
+      kill : kStat
+    }
+});
+
 count = 0;
 Template.registerHelper('oneRandomPost', function () {
   // $('.btn-next').hide();
