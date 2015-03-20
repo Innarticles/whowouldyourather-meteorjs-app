@@ -33,3 +33,12 @@ Template.home.rendered = () ->
 	$( document ).ready ->
 		# alert 'ready'
 		$('#loading-overlay').fadeOut 800
+
+
+Template.home.events 'click .play': (e, t) ->
+   e.preventDefault()
+   $('.main').trigger 'pause'
+   $('.swoosh').trigger 'play'
+   $('.main').trigger 'play';
+ return
+ 
