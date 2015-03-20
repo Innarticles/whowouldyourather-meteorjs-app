@@ -19,12 +19,12 @@ Template.posts.rendered = function () {
     $('.btn-next').hide();
 };
 
-Template.posts.onCreated = function () {
-   // $('.card').each(function () {
-   //      $(this).removeClass('clicked');
-        console.log("in card")
-      // });
-};
+// Template.posts.onCreated = function () {
+//    // $('.card').each(function () {
+//    //      $(this).removeClass('clicked');
+//         console.log("in card")
+//       // });
+// };
 
 Template.posts.events({
     'click ': function () {
@@ -72,14 +72,15 @@ Template.posts.events({
             }
         }
     },
-    'click #vote': function () {
+    // 'click #vote': function () {
 
 
-    },
+    // },
 
     'click .btn-next': function(e) {
       Session.set('postPosition', (Session.get('postPosition') + 1));
       Session.set('cardCount', 0);
+      // Session.get('activeChoice');
       // return location.reload(true);
 
     } 

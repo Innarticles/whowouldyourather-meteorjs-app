@@ -25,6 +25,7 @@ Template.registerHelper('getCelebPic',function(id){
 
 count = 0;
 Template.registerHelper('oneRandomPost', function () {
+    Session.set('activeChoice', 'Marry');  
   $('.card').each(function () {
         $(this).removeClass('clicked');
         console.log("in card")
@@ -36,7 +37,7 @@ Template.registerHelper('oneRandomPost', function () {
   var testPosition = Session.get('postPosition');
 
   if(testPosition > postLength){
-    console.log("gameStats reached");
+    console.log("gameStats reached")
       Router.go("gameStats");
 
   }
