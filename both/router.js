@@ -1,6 +1,7 @@
 Router.configure({
   layoutTemplate: "masterLayout",
   loadingTemplate: "loading",
+  trackPageView: true,
   notFoundTemplate: "notFound",
   routeControllerNameConverter: "camelCase",
   onBeforeAction: function() {

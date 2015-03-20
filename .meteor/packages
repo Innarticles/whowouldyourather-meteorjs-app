@@ -43,3 +43,5 @@ accounts-ui
 
 jparker:gravatar
 cfs:ui
+reywood:iron-router-ga
+biasport:facebook-sdk
