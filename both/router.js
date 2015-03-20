@@ -7,7 +7,9 @@ Router.configure({
     Session.set('Marry', null);
     Session.set('HookUpWith', null);
     Session.set('Kill', null);
-    $('.btn-next').hide();
+    // $('.btn-next').hide();
+    $('#next-post').hide();
+
  
     // Session.set('cardCount', 0);
     // Session.set('postPosition', 0);
