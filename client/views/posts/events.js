@@ -1,4 +1,5 @@
 Template.posts.rendered = function () {
+    // $('.btn-next').hide();
     var check = $(".grey-text").attr("id");
     Session.set("name", check);
 
@@ -11,20 +12,19 @@ Template.posts.rendered = function () {
     Session.set('activeChoice','Marry');
 
     Session.set('cardCount', 0);
+    // $('.btn-next').hide();
     Session.set('postPosition', 0);
-
-    // $('.card').each(function () {
-    //     $(this).removeClass('clicked');
-    //   }); 
-    $('.btn-next').hide();
 };
 
-Template.posts.onCreated = function () {
-   // $('.card').each(function () {
-   //      $(this).removeClass('clicked');
-        console.log("in card")
-      // });
-};
+// Template.posts.onCreated = function () {
+//    // $('.card').each(function () {
+//    //      $(this).removeClass('clicked');
+//         console.log("in card")
+//       // });
+// };
+Template.posts.invokeAfterLoad = function () {
+  // $('.btn-next').hide();
+}
 
 Template.posts.events({
     'click ': function () {
@@ -52,7 +52,7 @@ Template.posts.events({
 
             } else if (Session.equals('activeChoice','HookUpWith')){
 
-                Session.set('laid',_id);
+                Session.set('HookUpWith',_id);
                 Celebs.update(_id, {$inc: {nLaid: 1}});
                 Session.set('activeChoice','Kill');
 
@@ -72,14 +72,15 @@ Template.posts.events({
             }
         }
     },
-    'click #vote': function () {
+    // 'click #vote': function () {
 
 
-    },
+    // },
 
     'click .btn-next': function(e) {
       Session.set('postPosition', (Session.get('postPosition') + 1));
       Session.set('cardCount', 0);
+      // Session.get('activeChoice');
       // return location.reload(true);
 
     } 

@@ -1,4 +1,4 @@
-<template name="dashboard">
+<template name="play">
 	<div class="container">
 		<div class="row" id="champion-messages">
 			<!-- <div class="col-md-3"> -->
@@ -35,7 +35,7 @@
 
 	</div>
 </template>
-
+<!-- 
 <template name="addWithModal">
 	<div class="panel panel-default">
 			<div class="panel-heading">
@@ -45,14 +45,14 @@
 				<a href="#afModal" data-toggle="modal" class="btn btn-primary" collection="Posts" operation="insert" fields="title,content,picture">Add a new post</a>
 			</div>
 	</div>
-</template>
+</template> -->
 
 <template name="posts">
 	{{#with oneRandomPost}}
 	<!-- {{#each Posts}} -->
 		<div class="panel panel-default">
 		<!-- {{#with oneRandomPost}} -->
-				<div class="panel-heading">
+				<!-- <div class="panel-heading">
 					<h3 class="panel-title">
 						{{title}}
 						<span class="pull-right">
@@ -60,7 +60,7 @@
 							<i class="fa fa-comments"></i> {{commentCount _id}}
 						</span>
 					</h3>
-				</div>
+				</div> -->
 				<div class="panel-body">
 				<div class="col-md-12">
 			      <h1>Who would you rather {{$.Session.get 'activeChoice'}}?</h1>
@@ -99,12 +99,12 @@
 						</div>
 
 					</div>
-					<div class="media">
+					<!-- <div class="media">
 						<a class="pull-left" href="#">
 							{{> profileThumb _id=owner}}
 						</a>
 						<div class="media-body">
-							<!-- <p>{{content}}</p> -->
+							<p>{{content}}</p>
 							{{#if $eq owner User._id}}
 							<small>
 								{{#afModal title="Update post" omitFields="createdAt,updatedAt,owner" class="text-primary" collection="Posts" operation="update" doc=_id}}
@@ -116,14 +116,14 @@
 							</small>
 							{{/if}}
 						</div>
-					</div>
+					</div> -->
 					<button class="btn btn-flat btn-next">Next</button>
 				</div>
-				<div class="panel-footer">
+				<!-- <div class="panel-footer">
 					{{> favoriteButton _id=_id}}
 					{{> commentFormToggle }}
 					{{> comments}}
-				</div>
+				</div> -->
 			<!-- {{/with}}	 -->
 		</div>
 	{{/with}}
