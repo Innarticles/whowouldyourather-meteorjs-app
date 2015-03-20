@@ -49,6 +49,8 @@ body{
   .card .card-image {
     position: relative;
     overflow: hidden; 
+    display: inline-block;
+    padding-top: 3%;
 
   }
     .card .card-image img {
