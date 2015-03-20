@@ -35,10 +35,18 @@ Template.home.rendered = () ->
 		$('#loading-overlay').fadeOut 800
 
 
-Template.home.events 'click .play': (e, t) ->
+Template.home.events 'click .playRules': (e, t) ->
    e.preventDefault()
    $('.main').trigger 'pause'
    $('.swoosh').trigger 'play'
    $('.main').trigger 'play';
+   $('.imgboard').attr 'src', 'img/22.jpg'
  return
  
+ Template.home.events 'click .playGame': (e, t) ->
+   e.preventDefault()
+   $('.main').trigger 'pause'
+   $('.swoosh').trigger 'play'
+   $('.main').trigger 'play';
+   Router.go 'entrySignUp'
+ return

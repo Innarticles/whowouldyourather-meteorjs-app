@@ -67,6 +67,7 @@ Router.map(function() {
     }  
   });
 
+
 //route to game statistics
 
   this.route("gameStats", {
@@ -131,7 +132,7 @@ saveRedirectUrl = function() {
   return this.next();
 };
 
-publicRoutes = _.union(Config.publicRoutes, ['entrySignIn', 'entrySignUp', 'entryForgotPassword', 'celebs']);
+publicRoutes = _.union(Config.publicRoutes, ['entrySignIn', 'entrySignUp', 'entryForgotPassword', 'celebs', 'howtoplay']);
 
 Router.onBeforeAction(saveRedirectUrl, {
   except: _.union(publicRoutes, ['entrySignOut'])
