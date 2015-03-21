@@ -1,6 +1,6 @@
 if Meteor.isServer
 	PrettyEmail.options = 
-		facebook: 'http://facebook.com/whowouldyourather'
+		facebook: 'http://facebook.com/whowouldyouratherapp'
 		twitter: 'http://twitter.com/whowouldyourather'
 		website: 'http://whowouldyourather.meteor.com'
 

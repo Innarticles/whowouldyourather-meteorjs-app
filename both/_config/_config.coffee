@@ -1,6 +1,6 @@
 @Config =
 	name: 'Who Would You Rather?'
-	title: 'Marry, Fuck or Kill'
+	title: 'Marry, HookUpWith or Kill'
 	subtitle: 'Nigeria and Ghana Celebrity Edition'
 	logo: ->
 		'<b>' + @name + '</b>'

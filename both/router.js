@@ -93,7 +93,7 @@ Router.map(function() {
   this.route("celebStats", {
     path: "/celebs/trend_status",
     waitOn: function() {
-      return [Meteor.subscribe('celebs'), Meteor.subscribe('attachments')];
+      return [Meteor.subscribe('celebs'), Meteor.subscribe('attachments'), Meteor.subscribe('posts')];
     },
     data: function(){
         return {                        
