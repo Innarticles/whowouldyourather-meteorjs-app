@@ -64,13 +64,9 @@
 				<!-- <div class="panel-body"> -->
 				<div class="col-md-12 text-center">
 			      <h1>Who would you rather <span style="font-weight:700; color:#CF000F;" class="animated shake">{{$.Session.get 'activeChoice'}}?</span></h1>
-			        <div class="text-center">
-						<button class="btn btn-flat"><span style="font-size:20px; font-weight:700; color:#CF000F;" class="animated shake">{{title}}</span></button>
-				  </div>
 			      <p>Think carefully, you only get <span style="font-weight:700; color:#CF000F;" class="animated shake">ONE chance!</span> on this set.  Click on the image of the celebrity you'd like to <span style="font-weight:700; color:#CF000F;">{{$.Session.get 'activeChoice'}}.</span></p>
-			    
 			    </div>
-					<div class="text-center animated bounceIn">
+					<div class="text-center">
 						<div class="card col-md-4" data-celebrity="{{celeb1s}}">
 							<div class="card-image">
 					          <img class="activator img-responsive" src="{{getCelebPic celeb1s}}">
