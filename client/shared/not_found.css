@@ -1,0 +1,45 @@
+.wrap{
+	 background-color: #ab000c;
+	 height:750px;
+	 margin: 0 auto;
+	 position: relative;
+}
+.h1not{
+	color: #fff;
+	font-size: 30px;
+	padding: 30px;
+}
+.banner{
+	width: 343px;
+	margin: 100px auto 0 auto ;
+}
+.copy{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	 color: #744971;
+	
+}
+.copy a{
+	 color: #fff;
+}
+.search{
+
+	font-size: 24px;
+	color: #fff;
+	/*width:500px;*/
+	margin:50px auto 0 auto; 
+	position: relative;
+}
+.gohome{
+
+  -webkit-animation-iteration-count:300;
+  -moz-animation-iteration-count:300;
+   animation-iteration-count:300;
+}
+.hey{
+
+  -webkit-animation-iteration-count:3;
+  -moz-animation-iteration-count:3;
+   animation-iteration-count:3;
+}

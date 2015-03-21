@@ -16,6 +16,6 @@
 			url: 'http://facebook.com/whowouldyourather'
 			icon: 'facebook'
 		twitter:
-			url: 'http://twitter.com/whowouldyourather'
+			url: 'http://twitter.com/whowudyourather'
 			icon: 'twitter'
 	publicRoutes: ['home', 'play']
