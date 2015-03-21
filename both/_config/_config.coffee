@@ -5,7 +5,7 @@
 	logo: ->
 		'<b>' + @name + '</b>'
 	footer: ->
-		@name + ' - Copyright ' + new Date().getFullYear()
+		@name + + 'v1.0' + ' - Copyright ' + new Date().getFullYear()
 	emails:
 		from: 'noreply@' + Meteor.absoluteUrl()
 	username: false
@@ -18,4 +18,4 @@
 		twitter:
 			url: 'http://twitter.com/whowouldyourather'
 			icon: 'twitter'
-	publicRoutes: ['home', 'posts']
+	publicRoutes: ['home', 'play']

@@ -5,9 +5,9 @@ Router.configure({
   notFoundTemplate: "notFound",
   routeControllerNameConverter: "camelCase",
   onBeforeAction: function() {
-    Session.set('Marry', null);
-    Session.set('HookUpWith', null);
-    Session.set('Kill', null);
+    // Session.set('Marry', null);
+    // Session.set('HookUpWith', null);
+    // Session.set('Kill', null);
     // $('.btn-next').hide();
     $('#next-post').hide();
 
@@ -154,7 +154,7 @@ saveRedirectUrl = function() {
 
 
 
-publicRoutes = _.union(Config.publicRoutes, ['entrySignIn', 'entrySignUp', 'entryForgotPassword', 'celebs', 'posts', 'gameStats']);
+publicRoutes = _.union(Config.publicRoutes, ['entrySignIn', 'entrySignUp', 'entryForgotPassword', 'celebs', 'addPost', 'celebStats']);
 
 
 Router.onBeforeAction(saveRedirectUrl, {

@@ -1,12 +1,20 @@
 <template name="celebStats">
-<h1>Game Over! Here are the Celebrity Trending Stats</h1>
-		<div id="totalscorecard">
+<h1>Well done! See the Latest Celebrity Trending Stats below:</h1>
+		<div id="totalscorescard">
 				<p>Celeb Stats:</p>
-				<div></div>			   
-				<a class="btn btn-flat btn-next" href="{{pathFor 'play'}}"> Play again?</a>
+				<div></div>	
+
+				<div class="container">
+				{{#if currentUser}}		   
+				<a href="http://whowouldyourather.meteor.com/play" class="btn button"><span>Play again?</span></a>
+				{{else}}
+				<a href="http://whowouldyourather.meteor.com/play" class="btn button"><span>Try out the WhoWouldYouRather Quiz</span></a>
+		
+				{{/if}}
 				<a href="http://www.facebook.com/sharer.php?u=/play" target="_blank" class="btn btn-block btn-social btn-facebook">
 					<i class="fa fa-facebook"></i>   Share on Facebook
 				</a>
+				</div>
 
 		</div>
 </template>

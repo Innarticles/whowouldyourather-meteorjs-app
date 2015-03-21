@@ -113,6 +113,10 @@ body{
   margin-top: 15px;
 }
 
+#next-post p {
+  font-size: 14px;
+}
+
 .btn.btn-block.btn-social.btn-facebook {
   border: none;
   width: 400px;
@@ -138,8 +142,8 @@ body{
   color: #CF000F;
 }
 
-  #totalscorescard {
-  width: 400px;
+#totalscorescard {
+  width: 100%;
   text-align: center;
   padding: 30px 30px; 
   background-color:rgba(255,255,255,0.5);
@@ -156,10 +160,24 @@ body{
   color: #222;
 }
 
+#totalscorescard .button {
+  border: none;
+  width: 400px;
+  font-size: .5em;
+  padding: 10px 0;
+  display: block;
+  margin: auto;
+  background-color: #CF000F;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
 .marry {
-      height: 200px;
-      width: 22px;
-      border: 1px solid #cef;
+      /*height: 200px;
+      width: 22px;*/
+      /*border: 1px solid #cef;*/
       position: relative;
       display: inline-block;
   }
@@ -171,10 +189,10 @@ body{
       background-color: #234;
   }
     .hook{
-      display: inline-block;
+      /*display: inline-block;
       height: 200px;
       width: 22px;
-      border: 1px solid #cff;
+      border: 1px solid #cff;*/
       position: relative;
   }
   .filler2{
@@ -187,9 +205,9 @@ body{
 
 
 .kill {
-        height: 200px;
+       /* height: 200px;
         width: 22px;
-        border: 1px solid #cf000f;
+        border: 1px solid #cf000f;*/
         position: relative;
         display: inline-block;
     }
