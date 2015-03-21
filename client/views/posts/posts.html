@@ -67,7 +67,7 @@
 			      <p>Think Carefully, you only get <span style="font-weight:700; color:#CF000F;" class="animated shake">ONE</span> chance! Click on the image of the celebrity you'd like to {{$.Session.get 'activeChoice'}}. </p>
 			    </div>
 					<div class="text-center">
-						<div class="card col-md-4" data-celebrity="{{celeb1s}}">
+						<div class="card  col-md-4" data-celebrity="{{celeb1s}}">
 							<div class="card-image">
 					          <img class="activator img-responsive" src="{{getCelebPic celeb1s}}">
 					        </div>
@@ -139,6 +139,18 @@
 			<!-- {{/with}}	 -->
 		<!-- </div> -->
 	{{/with}}
+	<audio class="fire">
+  <source src="sounds/fire.mp3" type="audio/mpeg" >
+    </audio>
+    <audio class="bells">
+  <source src="sounds/bells.mp3" type="audio/mpeg" >
+    </audio>
+    <audio class="gun">
+  <source src="sounds/gun.mp3" type="audio/mpeg" >
+    </audio>
+    <audio class="aww" >
+  <source src="sounds/aww.mp3" type="audio/mpeg" >
+    </audio>
 </template>
 
 <!-- <template name="favorites">

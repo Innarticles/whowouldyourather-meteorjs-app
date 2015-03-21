@@ -33,7 +33,7 @@ Template.posts.events({
             $(e.currentTarget).addClass('clicked');
 
             if (Session.equals('activeChoice','Marry')){
-
+                 $('.aww').trigger('play');
                 Session.set('Marry',_id);
                 Celebs.update(_id, {$inc: {nMarry: 1}});
                 var b = Celebs.findOne(_id);
@@ -42,14 +42,16 @@ Template.posts.events({
                 
 
             } else if (Session.equals('activeChoice','HookUpWith')){
-
+                 $('.bells').trigger('play');
                 Session.set('HookUpWith',_id);
                 Celebs.update(_id, {$inc: {nLaid: 1}});
                 Session.set('activeChoice','Kill');
 
 
             } else if (Session.equals('activeChoice','Kill')){
-
+                 $('.gun').trigger('play');
+                  $('.fire').trigger('play');
+                   $('.gun').trigger('play');
                 Session.set('Kill',_id);
                 Celebs.update(_id, {$inc: {nKill: 1}});
                 //Save post

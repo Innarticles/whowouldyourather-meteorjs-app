@@ -60,6 +60,7 @@ Template.registerHelper('oneRandomPost', function () {
   }
   });
 
+
 Template.masterLayout.rendered = function () {
   window.fbAsyncInit = function() {
        FB.init({
@@ -69,3 +70,18 @@ Template.masterLayout.rendered = function () {
        });
      };
 };
+
+Template.header.events({
+  'click .von': function () {
+    $('.main').trigger('play');
+    $('.von').addClass('animated pulse')
+    $('.von').removeClass('animated pulse')
+  },
+  'click .voff': function () {
+    $('.main').trigger('pause');
+    $('.voff').addClass('animated pulse')
+    $('.voff').removeClass('animated pulse')
+  }
+  
+});
+
