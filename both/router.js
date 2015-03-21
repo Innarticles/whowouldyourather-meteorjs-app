@@ -90,8 +90,8 @@ Router.map(function() {
 
 //route to game statistics
 
-  this.route("gameStats", {
-    path: "/gameover/statistics"
+  this.route("celebStats", {
+    path: "/celebs/trend_status"
   });
 
   this.route("profile", {

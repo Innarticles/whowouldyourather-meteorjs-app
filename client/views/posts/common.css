@@ -78,7 +78,7 @@ body{
   }
 
   #next-post {
-  width: 400px;
+  width: 100%;
   text-align: center;
   padding: 30px 30px; 
   background-color:rgba(255,255,255,0.5);
@@ -101,13 +101,29 @@ body{
 
 #next-post button {
   border: none;
-  width: 100%;
+  width: 200px;
   font-size: .5em;
   padding: 10px 0;
+  display: block;
+  margin: auto;
   background-color: #CF000F;
   border-radius: 10px;
   color: #fff;
-  font-weight: lighter;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.btn.btn-block.btn-social.btn-facebook {
+  border: none;
+  width: 400px;
+  font-size: .5em;
+  padding: 10px 0;
+  display: block;
+  margin: auto;
+  background-color: #3b5998;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 400;
   margin-top: 15px;
 }
 
@@ -139,3 +155,51 @@ body{
   z-index: 8;
   color: #222;
 }
+
+.marry {
+      height: 200px;
+      width: 22px;
+      border: 1px solid #cef;
+      position: relative;
+      display: inline-block;
+  }
+  .filler1{
+      height: 0%;
+      width: 22px;
+      position: absolute;
+      bottom: 0;
+      background-color: #234;
+  }
+    .hook{
+      display: inline-block;
+      height: 200px;
+      width: 22px;
+      border: 1px solid #cff;
+      position: relative;
+  }
+  .filler2{
+      height: 0%;
+      width: 22px;
+      position: absolute;
+      bottom: 0;
+      background-color: #cbb;
+  }
+
+
+.kill {
+        height: 200px;
+        width: 22px;
+        border: 1px solid #cf000f;
+        position: relative;
+        display: inline-block;
+    }
+.filler3 {
+  height: 0%;
+  display: block;
+  width: 22px;
+  position: absolute;
+  bottom: 0;
+  background-color: #9c000b;
+}
+
+    

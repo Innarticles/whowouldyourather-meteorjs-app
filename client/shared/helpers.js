@@ -24,15 +24,26 @@ Template.registerHelper('getCelebPic',function(id){
 });
 
 Template.registerHelper('getCelebStats',function(id){
-    var c = Celebs.findOne({_id: id});
+    c = Celebs.findOne({_id: id});
+    n = c.name;
     mStat = c.nMarry;
     lStat = c.nLaid;
     kStat = c.nKill;
     console.log(kStat);
-   
+
+    addStat = mStat + lStat + kStat;
+
+    // $('.progress').find('.progress-bar-success').css('width', ((mStat/addStat)*100) +'%')
+    // $('.progress').find('.progress-bar-warning').css('width', ((lStat/addStat)*100) +'%')
+    // $('.progress').find('.progress-bar-danger').css('width',((kStat/addStat)*100) +'%')
+
     return {
-      marry : mStat
+      name : n,
+      marry : mStat,
+      hookup : lStat,
+      kill : kStat
     }
+
 });
 
 count = 0;
@@ -51,8 +62,8 @@ Template.registerHelper('oneRandomPost', function () {
   var testPosition = Session.get('postPosition');
 
   if(testPosition > postLength){
-    console.log("gameStats reached")
-      Router.go("gameStats");
+    console.log("celebStats reached")
+      Router.go("celebStats");
 
   }
   else{

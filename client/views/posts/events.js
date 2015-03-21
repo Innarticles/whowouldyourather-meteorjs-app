@@ -62,7 +62,33 @@ Template.posts.events({
 
             if(Session.get('cardCount') == 3) {
               // $('.btn-next').show();
+
+                progressBar = function (div, stat) {
+                    console.log('just got called');
+                    var stepSize = 50;
+                    setTimeout((function () {
+                        var filler = div,
+                            percentage = 0;
+                        return function progress() {
+                            filler.style.height = percentage + "%";
+                            percentage += 1;
+                            if (percentage <= stat) {
+                                setTimeout(progress, stepSize);
+                            }
+                        }
+
+                    }()), stepSize);
+                  }
+
+                 console.log("helloooooo" + $('.filler1')[0] + mStat +"-----");
+                 console.log("helloooooo" + $('.filler2')[0] + lStat +"-----");
+                 console.log("helloooooo" + $('.filler3')[0] + kStat +"-----");
+                 progressBar($('.filler1')[0], ((mStat/addStat) * 100));
+                 progressBar($('.filler2')[0], ((lStat/addStat) * 100));
+                 progressBar($('.filler3')[0], ((kStat/addStat) * 100));
+
               $('#next-post').show();
+
 
             }
         }

@@ -64,7 +64,7 @@
 				<!-- <div class="panel-body"> -->
 				<div class="col-md-12 text-center">
 			      <h1>Who would you rather <span style="font-weight:700; color:#CF000F;" class="animated shake">{{$.Session.get 'activeChoice'}}?</span></h1>
-			      <p>Think Carefully, you only get <span style="font-weight:700; color:#CF000F;" class="animated shake">ONE</span> chance! Click on the image of the celebrity you'd like to {{$.Session.get 'activeChoice'}}. </p>
+			      <p>Think carefully, you only get <span style="font-weight:700; color:#CF000F;" class="animated shake">ONE chance!</span> on this set.  Click on the image of the celebrity you'd like to <span style="font-weight:700; color:#CF000F;">{{$.Session.get 'activeChoice'}}.</span></p>
 			    </div>
 					<div class="text-center">
 						<div class="card col-md-4" data-celebrity="{{celeb1s}}">
@@ -98,6 +98,9 @@
 						</div>
 
 					</div>
+					<div class="text-center">
+						<button class="btn btn-flat btn-next">Not interested in any of the above celebrity? Click Here To Skip</button>
+					</div>
 					<!-- <div class="media">
 						<a class="pull-left" href="#">
 							{{> profileThumb _id=owner}}
@@ -117,14 +120,60 @@
 						</div>
 					</div> -->
 					<div id="next-post">
+					<div class="container row">
 						{{#with getCelebStats celeb1s}}
-						<p>Celeb Stats: {{this.marry}} </p>
-					    <!-- <p>Your Score: <span class="score"></span></p> -->
-					    <span class="sml">High Score: <span id="high"></span></span>
-					    <!-- <button>Play Again</button> -->
-						<button class="btn btn-flat btn-next">Next</button>
-						<button class="btn btn-flat btn-next">Share</button>					    
+						<div class="container col-md-4">
+						<p>{{this.name}}</p>
+						<div class="marry">
+						    <div id="" class="filler1"></div>
+						</div>
+						<div class="hook">
+						    <div id="" class="filler2"></div>
+						</div>
+						<div class="kill">
+						    <div id="" class="filler3"></div>
+						</div>
+						</div>
+						
 						{{/with}}
+
+						{{#with getCelebStats celeb2s}}
+						<div class="container col-md-4">
+						<p>{{this.name}}</p>
+						<div class="marry">
+						    <div id="" class="filler1"></div>
+						</div>
+						<div class="hook">
+						    <div id="" class="filler2"></div>
+						</div>
+						<div class="kill">
+						    <div id="" class="filler3"></div>
+						</div>
+						</div>
+						{{/with}}
+
+						{{#with getCelebStats celeb3s}}
+						<div class="container col-md-4">
+						<p>{{this.name}}</p>
+						<div class="marry">
+						    <div id="" class="filler1"></div>
+						</div>
+						<div class="hook">
+						    <div id="" class="filler2"></div>
+						</div>
+						<div class="kill">
+						    <div id="" class="filler3"></div>
+						</div>
+						</div>
+						{{/with}}
+					</div>
+					<div class="container">
+						<button class="btn btn-flat btn-next">Next</button>
+
+						<a href="http://www.facebook.com/sharer.php?u=/play" target="_blank" class="btn btn-block btn-social btn-facebook">
+						    <i class="fa fa-facebook"></i>   Share on Facebook
+						</a>
+					</div>
 					</div>
 				<!-- </div> -->
 				<span class="pull-right">
@@ -139,6 +188,18 @@
 			<!-- {{/with}}	 -->
 		<!-- </div> -->
 	{{/with}}
+	<audio class="fire">
+  		<source src="/sounds/fire.mp3" type="audio/mpeg" >
+    </audio>
+    <audio class="bells">
+  		<source src="/sounds/bells.mp3" type="audio/mpeg" >
+    </audio>
+    <audio class="gun">
+  		<source src="/sounds/gun.mp3" type="audio/mpeg" >
+    </audio>
+    <audio class="aww" >
+  		<source src="/sounds/aww.mp3" type="audio/mpeg" >
+    </audio>
 </template>
 
 <!-- <template name="favorites">
