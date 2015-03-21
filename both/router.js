@@ -56,6 +56,7 @@ Router.map(function() {
             createdAt: -1
           }
         }).fetch()
+
       };
     }
   });
@@ -86,10 +87,11 @@ Router.map(function() {
     }  
   });
 
+
 //route to game statistics
 
-  this.route("gameStats", {
-    path: "/gameover/statistics"
+  this.route("celebStats", {
+    path: "/celebs/trend_status"
   });
 
   this.route("profile", {
@@ -150,7 +152,10 @@ saveRedirectUrl = function() {
   return this.next();
 };
 
+
+
 publicRoutes = _.union(Config.publicRoutes, ['entrySignIn', 'entrySignUp', 'entryForgotPassword', 'celebs', 'posts', 'gameStats']);
+
 
 Router.onBeforeAction(saveRedirectUrl, {
   except: _.union(publicRoutes, ['entrySignOut'])
