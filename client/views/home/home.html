@@ -1,34 +1,40 @@
 <template name="home">
-<div id="skrollr-body" style="background:url('img/bgcollage.jpg'); background-size:cover;">
-  
+    <div id="skrollr-body" style="background:url('img/bgcollage.jpg'); background-size:cover;">
 
-<section id="intro" class="head2 colored text-center">
 
-<div class="container">
-        <div class="row firstp ">
-            <div class="col-sm-8 col-sm-offset-2 ">
-                <img class="img-responsive imgboard" src="img/firstpage.jpg" width="912px" height="538px">
+        <section id="intro" class="head2 colored text-center">
 
-            </div>
-        </div>
+            <div class="container">
+                <div class="row firstp ">
+                    <div class="col-sm-8 col-sm-offset-2 ">
+                        <img class="img-responsive imgboard" src="img/firstpage.jpg" width="912px" height="538px">
 
-        <div class="animated pulse row center fpage">
-           <a href="" class="playRules">HOW TO PLAY</a>
-        </div>
-         <div class="animated pulse row center fpage">
-           <a href="{{pathFor 'entrySignUp'}}" class="playGame">START GAME</a>
-        </div>
-    </div>
-      
-<audio class="main" loop autoplay>
-  <source src="sounds/warp.mp3" type="audio/mpeg" >
-</audio>
-<audio class="swoosh">
-  <source src="sounds/swoosh.mp3" type="audio/mpeg" >
-</audio>
-    </section>
+                    </div>
+                </div>
 
-    
-</div>
+                <div class="animated pulse row center fpage">
+                   <div class="col-sm-12">
+                       <a href="" class="playRules">HOW TO PLAY</a>
+                   </div>
+               </div>
+               <div class="animated pulse row center fpage">
+               <div class="col-sm-12">
+                       <a href="{{pathFor 'entrySignUp'}}" class="playGame">START GAME</a>
 
-</template>
+                   </div>
+
+               </div>
+           </div>
+
+           <audio class="main" loop autoplay>
+              <source src="sounds/warp.mp3" type="audio/mpeg" >
+              </audio>
+              <audio class="swoosh">
+                  <source src="sounds/swoosh.mp3" type="audio/mpeg" >
+                  </audio>
+              </section>
+
+
+          </div>
+
+      </template>
