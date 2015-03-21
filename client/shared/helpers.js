@@ -23,6 +23,29 @@ Template.registerHelper('getCelebPic',function(id){
     return Attachments.findOne({_id: p}).url();
 });
 
+Template.registerHelper('getCelebStats',function(id){
+    c = Celebs.findOne({_id: id});
+    n = c.name;
+    mStat = c.nMarry;
+    lStat = c.nLaid;
+    kStat = c.nKill;
+    console.log(kStat);
+
+    addStat = mStat + lStat + kStat;
+
+    // $('.progress').find('.progress-bar-success').css('width', ((mStat/addStat)*100) +'%')
+    // $('.progress').find('.progress-bar-warning').css('width', ((lStat/addStat)*100) +'%')
+    // $('.progress').find('.progress-bar-danger').css('width',((kStat/addStat)*100) +'%')
+
+    return {
+      name : n,
+      marry : mStat,
+      hookup : lStat,
+      kill : kStat
+    }
+
+});
+
 count = 0;
 Template.registerHelper('oneRandomPost', function () {
   // $('.btn-next').hide();
@@ -39,14 +62,26 @@ Template.registerHelper('oneRandomPost', function () {
   var testPosition = Session.get('postPosition');
 
   if(testPosition > postLength){
-    console.log("gameStats reached")
-      Router.go("gameStats");
+    console.log("celebStats reached")
+      Router.go("celebStats");
 
   }
   else{
     return Posts.find().fetch()[Session.get('postPosition')];
   }
   });
+
+
+Template.masterLayout.rendered = function () {
+  window.fbAsyncInit = function() {
+       FB.init({
+         appId      : '783334228451511',
+         xfbml      : true,
+         version    : 'v2.2'
+       });
+     };
+};
+
 Template.header.events({
   'click .von': function () {
     $('.main').trigger('play');
@@ -60,3 +95,4 @@ Template.header.events({
   }
   
 });
+

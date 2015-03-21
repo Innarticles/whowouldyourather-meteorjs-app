@@ -8,11 +8,9 @@
 		@name + ' - Copyright ' + new Date().getFullYear()
 	emails:
 		from: 'noreply@' + Meteor.absoluteUrl()
-	blog: 'http://meteorfactory.io'
-	about: 'http://meteorfactory.io'
 	username: false
 	homeRoute: '/'
-	dashboardRoute: '/dashboard'
+	dashboardRoute: '/play'
 	socialMedia:
 		facebook:
 			url: 'http://facebook.com/whowouldyourather'

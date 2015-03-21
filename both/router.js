@@ -1,6 +1,7 @@
 Router.configure({
   layoutTemplate: "masterLayout",
   loadingTemplate: "loading",
+  trackPageView: true,
   notFoundTemplate: "notFound",
   routeControllerNameConverter: "camelCase",
   onBeforeAction: function() {
@@ -26,7 +27,9 @@ Router.configure({
 });
 
 Router.map(function() {
+
   this.route("home", {
+    trackPageView: true,
     path: "/",
     layoutTemplate: "homeLayout"
   });
@@ -53,6 +56,7 @@ Router.map(function() {
             createdAt: -1
           }
         }).fetch()
+
       };
     }
   });
@@ -86,8 +90,8 @@ Router.map(function() {
 
 //route to game statistics
 
-  this.route("gameStats", {
-    path: "/gameover/statistics"
+  this.route("celebStats", {
+    path: "/celebs/trend_status"
   });
 
   this.route("profile", {
