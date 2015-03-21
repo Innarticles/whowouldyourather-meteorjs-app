@@ -23,8 +23,8 @@ Template.registerHelper('getCelebPic',function(id){
     return Attachments.findOne({_id: p}).url();
 });
 
-Template.registerHelper('getCelebStats',function(id,num){
-    var num=num;
+Template.registerHelper('getCelebStats',function(id){
+    // var num=num;
     var c = Celebs.findOne({_id: id});
     var n = c.name;
     var mStat = c.nMarry;

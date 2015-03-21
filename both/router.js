@@ -91,7 +91,15 @@ Router.map(function() {
 //route to game statistics
 
   this.route("celebStats", {
-    path: "/celebs/trend_status"
+    path: "/celebs/trend_status",
+    waitOn: function() {
+      return [Meteor.subscribe('celebs'), Meteor.subscribe('attachments')];
+    },
+    data: function(){
+        return {                        
+            Celebs: Celebs.find().fetch()
+        };
+    }  
   });
 
   this.route("profile", {

@@ -1,8 +1,26 @@
 <template name="celebStats">
 <h1>Well done! See the Latest Celebrity Trending Stats below:</h1>
-		<div id="totalscorescard">
-				<p>Celeb Stats:</p>
-				<div></div>	
+		<div id="totalscorescard" class="container">
+				<table class="table table-bordered table-responsive">
+				<tbody>
+				<tr>
+				  	<td>Celeb Name</td>
+				  	<td>Marry Count</td>
+				  	<td>HookUp Count</td>
+				  	<td>Kill Count</td>
+				  </tr>
+				{{#each Celebs}}
+				  <tr>
+				  	<td>{{name}}</td>
+				  	<td>{{nMarry}}</td>
+					<td>{{nLaid}}</td>
+					<td>{{nKill}}</td>
+				  </tr>
+				{{/each}}
+
+				</tbody>
+				</table>
+
 
 				<div class="container">
 				{{#if currentUser}}		   
