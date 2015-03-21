@@ -60,3 +60,12 @@ Template.registerHelper('oneRandomPost', function () {
   }
   });
 
+Template.masterLayout.rendered = function () {
+  window.fbAsyncInit = function() {
+       FB.init({
+         appId      : '783334228451511',
+         xfbml      : true,
+         version    : 'v2.2'
+       });
+     };
+};

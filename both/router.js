@@ -1,6 +1,7 @@
 Router.configure({
   layoutTemplate: "masterLayout",
   loadingTemplate: "loading",
+  trackPageView: true,
   notFoundTemplate: "notFound",
   routeControllerNameConverter: "camelCase",
   onBeforeAction: function() {
@@ -26,7 +27,9 @@ Router.configure({
 });
 
 Router.map(function() {
+
   this.route("home", {
+    trackPageView: true,
     path: "/",
     layoutTemplate: "homeLayout"
   });
